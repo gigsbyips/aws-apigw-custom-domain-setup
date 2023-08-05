@@ -6,6 +6,10 @@ from domain_stack import DomainStack
 
 app = cdk.App()
 
+# This is for a scenario where you have EDGE Optimised API, so certificate must be in us-east-1 region.
+# API can be in any region. This uses OOTB cross_region_reference support.
+# AWS creates custom resources behind the scene that stores values in SSM to be accessible in other region.
+
 hosted_zone_name = "<<REPLACE_WITH_YOUR_DOMAIN_NAME>>"
 custom_domains=["first","second"] # Replace with appropriate custom domain names.
 
