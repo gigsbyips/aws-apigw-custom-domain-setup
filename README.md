@@ -4,6 +4,10 @@
 This repo contains an example to set up custom domain for a APIs hosted via APIGW. 
 AWS CDK with Python is used to set up the custom domain.
 
+## Important- For EDGE optimised APIs
+IF the API you are going to create is EDGE optimized, then AWS expects the certificate (used by custom domain) to be hosted in us-east-1 region irrespective of the region where the API is hosted.
+So, for those cases please refer branches `crossregion-certs-for-edge-api-using-custom-resource` and `crossregion-certs-for-edge-apis`
+
 ## Pre-requisites
 
 - AWS CLI is installed and a profile is set up.
